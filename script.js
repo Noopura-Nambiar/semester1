@@ -1,5 +1,7 @@
+var name = alert("Welcome to my Lab Project!");
+
 function changeColor(squareId){
- var square = document.getElementById ("squareId");
+ var square = document.getElementById (squareId);
  var randomColor = getRandomColor();
 square.style.backgroundColor = randomColor   
 }
@@ -13,3 +15,14 @@ function getRandomColor(){
         return color;
 }
 
+function flashColors(){
+    var flashes = document.querySelectorAll(".flash")
+
+    flashes.forEach(function(flash){
+
+            var randomColor = getRandomColor();
+            flash.style.backgroundColor = randomColor;
+        })
+    }
+
+var intervalID = setInterval(flashColors, 1000);

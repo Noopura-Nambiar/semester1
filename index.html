@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+         body{
+                background: lightblue;
+            }
+    </style>
 </head>
 <body>
+    <h1>Noopura's Lab Project</h1>
+    <h2>Current Time</h2>
+    <div id="clock"></div>
+    <script>
+        function updateClock() {
+          var now = new Date();
+          var hours = now.getHours();
+          var minutes = now.getMinutes();
+          var seconds = now.getSeconds();
+          document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + seconds;
+        }
+        setInterval(updateClock, 1000);
+      </script>
+
     <div id="container">
         <div class="box" id="square1"></div>
         <div class="box" id="square2"></div>
@@ -20,7 +39,19 @@
         <button class="button" onclick="changeColor('square3')">Color3</button>
     </div>
 
-    <div class="flash"></div>
-    
+    <div class="grid">
+        <div class="flash"></div>
+        <div class="flash"></div>
+        <div class="flash"></div>
+        <div class="flash"></div>
+        <div class="flash"></div>
+        <div class="flash"></div>
+        <div class="flash"></div>
+        <div class="flash"></div>
+        <div class="flash"></div>
+
+    </div>
+
 </body>
 </html>
+
